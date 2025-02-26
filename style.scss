@@ -93,6 +93,48 @@ main {
   }
   .vertical-text {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    .top {
+      aspect-ratio: 1/1;
+      width: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .bottom {
+      width: 100%;
+      display: flex;
+      gap: 2em;
+      p {
+        writing-mode: vertical-lr;
+        text-transform: uppercase;
+        font-size: 0.8em;
+      }
+      .text {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        h1 {
+          font-size: 3em;
+          text-transform: uppercase;
+          font-weight: 350;
+          line-height: 1;
+        }
+        p {
+          writing-mode: initial;
+          line-height: 1.5;
+
+          text-transform: initial;
+          font-size: 1.55em;
+          font-family: monospace;
+          color: rgba(0, 0, 0, 0.5);
+        }
+      }
+    }
   }
 }
 
@@ -116,6 +158,27 @@ main {
             p {
               font-size: 1.5em;
             }
+          }
+        }
+      }
+    }
+    .vertical-text {
+      flex-direction: row;
+      gap: 4em;
+      .top {
+        width: 25%;
+      }
+      .bottom {
+        width: 75%;
+        flex-direction: row-reverse;
+        .text {
+          h1 {
+            font-size: 6em;
+            word-wrap: unset;
+          }
+          p {
+            margin-top: auto;
+            width: 50%;
           }
         }
       }
