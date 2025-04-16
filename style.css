@@ -144,7 +144,6 @@ main .our-services {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 2rem;
   padding-top: 2rem;
 }
@@ -188,16 +187,37 @@ main .our-services .content .card-container .card .link-container {
   gap: 1em;
 }
 main .our-services .content .card-container .card .link-container .arrow-container {
-  padding: 0.5em;
+  padding: 0.6em 0.7em;
+  overflow: hidden;
   background-color: #111;
+  color: #fff;
+  border-radius: 50%;
+  position: relative;
+}
+main .our-services .content .card-container .card .link-container .arrow-container i {
+  font-size: 1.1em;
+  position: relative;
 }
 main .our-services .content .card-container .card .link-container h5 {
-  font-weight: 500;
+  font-weight: 450;
   text-transform: uppercase;
 }
 main .our-services img {
   width: 100%;
   aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+main .selected-works {
+  width: 100%;
+  padding: 2em 0;
+}
+main .selected-works img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media (min-width: 995px) {
@@ -224,18 +244,57 @@ main .our-services img {
     gap: 4em;
   }
   main .vertical-text .top {
-    width: 25%;
+    width: 30%;
   }
   main .vertical-text .bottom {
-    width: 75%;
+    width: 70%;
     flex-direction: row-reverse;
   }
+  main .vertical-text .bottom .text {
+    padding: 1rem 0;
+    gap: 3rem;
+  }
   main .vertical-text .bottom .text h1 {
-    font-size: 6em;
+    font-size: 4.65em;
     word-wrap: unset;
   }
   main .vertical-text .bottom .text p {
     margin-top: auto;
-    width: 50%;
+    width: 100%;
+  }
+  main .our-services {
+    flex-direction: row;
+    gap: 4rem;
+  }
+  main .our-services .content {
+    justify-content: space-between;
+  }
+  main .our-services .content h1 {
+    font-size: 4.5em;
+  }
+  main .our-services .content .card-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  main .our-services .content .card-container .card {
+    width: calc(50% - 1rem);
+  }
+  main .our-services .content .card-container .card h3 {
+    font-size: 1.1em;
+  }
+  main .our-services .content .card-container .card p {
+    font-size: 1.35em;
+    line-height: 1.4;
+  }
+  main .our-services .content .card-container .card .link-container .arrow-container i {
+    font-size: 1.1em;
+  }
+  main .our-services .content .card-container .card .link-container h5 {
+    font-weight: 450;
+    text-transform: uppercase;
+  }
+  main .our-services img {
+    width: 45%;
   }
 }
