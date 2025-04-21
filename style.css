@@ -219,6 +219,18 @@ main .selected-works img {
   -o-object-fit: cover;
      object-fit: cover;
 }
+main .selected-works .work-container {
+  padding-top: 2em;
+  display: grid;
+  grid-template-columns: repeat(1fr);
+  gap: 2em;
+}
+main .selected-works .work-container img {
+  aspect-ratio: 1/1;
+}
+main .selected-works .work-container img:nth-child(2) {
+  display: none;
+}
 
 @media (min-width: 995px) {
   main {

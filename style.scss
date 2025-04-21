@@ -10,6 +10,19 @@
     position: relative;
   }
 }
+@mixin linkcontainer {
+  display: flex;
+  padding: 1em 0;
+  align-items: center;
+  gap: 1em;
+  .arrow-container {
+    @include arrowcontainer;
+  }
+  h5 {
+    font-weight: 450;
+    text-transform: uppercase;
+  }
+}
 
 * {
   margin: 0;
@@ -191,17 +204,7 @@ main {
             font-weight: 100;
           }
           .link-container {
-            display: flex;
-            padding: 1em 0;
-            align-items: center;
-            gap: 1em;
-            .arrow-container {
-              @include arrowcontainer;
-            }
-            h5 {
-              font-weight: 450;
-              text-transform: uppercase;
-            }
+            @include linkcontainer;
           }
         }
       }
@@ -219,6 +222,18 @@ main {
     img {
       width: 100%;
       object-fit: cover;
+    }
+    .work-container {
+      padding-top: 2em;
+      display: grid;
+      grid-template-columns: repeat(1fr);
+      gap: 2em;
+      img {
+        aspect-ratio: 1/1;
+        &:nth-child(2) {
+          display: none;
+        }
+      }
     }
   }
 }
